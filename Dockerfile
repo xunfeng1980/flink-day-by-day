@@ -4,7 +4,7 @@ FROM flink:1.14.4
 # install python3: it has updated Python to 3.9 in Debian 11 and so install Python 3.7 from source
 # it currently only supports Python 3.6, 3.7 and 3.8 in PyFlink officially.
 
-RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
+# RUN sed -i 's/deb.debian.org/mirrors.ustc.edu.cn/g' /etc/apt/sources.list && sed -i 's|security.debian.org/debian-security|mirrors.ustc.edu.cn/debian-security|g' /etc/apt/sources.list
 RUN apt-get update -y && \
 apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev libffi-dev && \
 wget https://mirrors.huaweicloud.com/python/3.7.9/Python-3.7.9.tgz && \
